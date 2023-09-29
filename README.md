@@ -30,22 +30,18 @@ Ce projet à été réalisé dans le cadre de la SAE S5.01 conformément au prog
 
 <br>
 
-#### Auteurs :
+#### Auteurs
 <br>
 
 <div style="text-align: center">
 
-## TP1
+#### TP1
 
 ---
 
 Jeannot NAEGELY
 
----
-
-<br>
-
-## TP2
+#### TP2
 
 ---
 
@@ -53,11 +49,7 @@ Dorian JOLY
 
 Mathys PIERREZ
 
----
-
-<br>
-
-## TP3
+#### TP3
 
 ---
 
@@ -65,17 +57,11 @@ Danaé ALBRECHT--MARTIN
 
 Geoffrey OSSARD
 
----
-
-<br>
-
-## TP4
+#### TP4
 
 ---
 
 Yoann Grim
-
----
 
 </div>
 
