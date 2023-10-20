@@ -26,7 +26,7 @@ DOC : [https://docs.python.org/fr/3/library/subprocess.html#subprocess.run]
 ----------------------------------------------------------------------------- """
 
 # Dependencies for Stable Diffusion & Llama 2
-def install_dependencies():
+def install_dependencies(displayLog):
     dependencies = [
         "GitPython==3.1.32",
         "Pillow==9.5.0",
@@ -66,26 +66,48 @@ def install_dependencies():
 
     if not os.path.exists("logs"):
         os.makedirs("logs")
-
-    # Open log file with append mod
+    
+    # Open logs file in append mode
     with open(log_file, 'a') as log:
         for dependency in dependencies:
-            # Redirect out/err to log file
-            subprocess.run(["pip", "install", dependency], stdout=log, stderr=log)
+            # Redirect the output/error to the log file and optionally display it in the console
+            result = subprocess.run(["pip", "install", dependency], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+            # Save standard and error output to log file
+            log.write(result.stdout)
+            log.write(result.stderr)
+
+            if displayLog:
+                print(result.stdout)  # Show standard output in console
+                print(result.stderr)  # Show error output in console
+            
     
+def logs_config():
+
+    user_choice = input("\t\tSouhaitez-vous afficher les logs ? (O/N): ")
+
+    if user_choice.lower() == "o":
+        print("\t\tVous avez choisi d'afficher les logs.\n")
+        return True
+    else:
+        print("\t\tVous avez choisi de ne pas afficher les logs.\n")
+        return False
+
 
 def main():
-    print("\n\t\t===============================================")
-    print("\t\t           Démarrage de l'instalation")
+    print("\t\t===============================================")
+    print("\t\t           Démarrage de l'installation")
     print("\t\t===============================================\n\n")
-
+    
+    time.sleep(1)
+    displayLog = logs_config()
     time.sleep(2)
 
     print("\t\t1. Installation des dépendances en cours...")
     print("\t\t-----------------------------------------------\n")
 
     time.sleep(2)
-    install_dependencies()
+    install_dependencies(displayLog)
 
     print("\t\tDépendances installées.\n")
     time.sleep(1)
