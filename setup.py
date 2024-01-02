@@ -4,23 +4,23 @@ import os
 import sys
 
 """ -------------------------------------------------------------------------------
-USAGE : 
-    subprocess.run( args, 
-                    *, 
-                    stdin=None, 
-                    input=None, 
-                    stdout=None, 
-                    stderr=None, 
-                    capture_output=False, 
-                    shell=False, 
-                    cwd=None, 
-                    timeout=None, 
-                    check=False, 
-                    encoding=None, 
-                    errors=None, 
-                    text=None, 
-                    env=None, 
-                    universal_newlines=None, 
+USAGE :
+    subprocess.run( args,
+                    *,
+                    stdin=None,
+                    input=None,
+                    stdout=None,
+                    stderr=None,
+                    capture_output=False,
+                    shell=False,
+                    cwd=None,
+                    timeout=None,
+                    check=False,
+                    encoding=None,
+                    errors=None,
+                    text=None,
+                    env=None,
+                    universal_newlines=None,
                     **other_popen_kwargs )
 
 DOC : [https://docs.python.org/fr/3/library/subprocess.html#subprocess.run]
@@ -35,6 +35,8 @@ def install_dependencies(displayLog):
         "basicsr==1.4.2",
         "blendmodes==2022",
         "clean-fid==0.1.35",
+        "ctransformers",
+        "diffusers",
         "einops==0.4.1",
         "fastapi==0.94.0",
         "gfpgan==1.3.8",
@@ -67,7 +69,7 @@ def install_dependencies(displayLog):
 
     if not os.path.exists("logs"):
         os.makedirs("logs")
-    
+
 
     # Open logs file in append mode
     with open(log_file, 'a') as log:
@@ -75,10 +77,10 @@ def install_dependencies(displayLog):
         printProgressBar(0, len(dependencies), prefix = 'Progress:', suffix = 'Complete', length = 20)
         for i, dependency in enumerate(dependencies):
             start_time = time.time()  # Enregistrer l'heure de début
-            
+
             # Redirect the output/error to the log file and optionally display it in the console
             result = subprocess.run(["pip", "install", dependency], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-            
+
             end_time = time.time()  # Enregistrer l'heure de fin
 
             # Calculer le temps d'installation réel
@@ -96,8 +98,8 @@ def install_dependencies(displayLog):
             # Update Progress Bar
             printProgressBar(i + 1, len(dependencies), prefix = 'Progress:', suffix = 'Complete', length = 20)
 
-            
-    
+
+
 def logs_config():
 
     user_choice = input("\t\tSouhaitez-vous afficher les logs ? (O/N): ")
@@ -129,7 +131,7 @@ def printProgressBar (iteration, total, prefix = '', suffix = '', decimals = 1, 
     bar = fill * filledLength + '-' * (length - filledLength)
     print(f'\r\t\t{prefix} |{bar}| {percent}% {suffix}', end = printEnd)
     # Print New Line on Complete
-    if iteration == total: 
+    if iteration == total:
         print()
 
 
@@ -137,7 +139,7 @@ def main():
     print("\n\t\t===============================================")
     print("\t\t           Démarrage de l'installation")
     print("\t\t===============================================\n\n")
-    
+
     time.sleep(1)
     displayLog = logs_config()
 
@@ -158,4 +160,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
