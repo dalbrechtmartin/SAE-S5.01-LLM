@@ -1,3 +1,5 @@
 transformers==4.36.2
 diffusers==0.25.0
 torch==1.10.0
+ctransformers==0.2.27
+accelerate==0.25.0

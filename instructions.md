@@ -23,14 +23,14 @@ Ce fichier contient toutes les dépendances à installer.
 
 ## Commandes
 
-### Installer toutes les dépendances
+### Créer le toolkit (+ installation des dépendances)
 ```
-pip install -r requirements.txt
+python3 setup.py install --user
 ```
 
-### Créer le toolkit
+### Installer toutes les dépendances (vérification que rien n'a été oublié)
 ```
-python3 setup.py
+pip install -r requirements.txt
 ```
 
 ### Lancer un prompt llama
