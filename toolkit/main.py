@@ -1,6 +1,7 @@
-from toolkit.interface import GenericModelWrapper
-from toolkit.llama_wrapper import LlamaWrapper
-from toolkit.diffusion_wrapper import DiffusionWrapper
+from toolkit.wrappers.interface import GenericModelWrapper
+from toolkit.wrappers.llama_wrapper import LlamaWrapper
+from toolkit.wrappers.diffusion_wrapper import DiffusionWrapper
+from toolkit.wrappers.musicgen_wrapper import MusicgenWrapper
 import yaml
 import sys
 
@@ -9,6 +10,8 @@ def load_model_wrapper(model_type, model_config):
         return LlamaWrapper(model_config)
     elif model_type == "diffusion":
         return DiffusionWrapper(model_config)
+    elif model_type == "musicgen":
+        return MusicgenWrapper(model_config)
     else:
         raise ValueError(f"Unsupported model type: {model_type}")
 

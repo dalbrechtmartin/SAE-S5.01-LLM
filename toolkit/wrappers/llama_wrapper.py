@@ -1,4 +1,4 @@
-from toolkit.interface import GenericModelWrapper
+from toolkit.wrappers.interface import GenericModelWrapper
 from ctransformers import AutoModelForCausalLM
 
 class LlamaWrapper(GenericModelWrapper):

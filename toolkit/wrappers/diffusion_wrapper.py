@@ -1,4 +1,4 @@
-from toolkit.interface import GenericModelWrapper
+from toolkit.wrappers.interface import GenericModelWrapper
 from diffusers import StableDiffusionPipeline
 import torch
 
@@ -15,5 +15,6 @@ class DiffusionWrapper(GenericModelWrapper):
 
     def generate(self, prompt):
         image = self.pipe(prompt).images[0]
-        image.save(prompt.lower().replace(" ", "_") + ".png")
+        image.save("test.png")
+        #image.save(prompt.lower().replace(" ", "_") + ".png")
         return image

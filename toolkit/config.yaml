@@ -1,3 +1,4 @@
 llama_model: "TheBloke/Llama-2-13B-Ensemble-v5-GGUF"
 llama_model_file: "llama-2-13b-ensemble-v5.Q5_K_M.gguf"
 diffusion_model: "runwayml/stable-diffusion-v1-5"
+musicgen_model: "facebook/musicgen-large"
