@@ -42,3 +42,8 @@ python3 -m toolkit.main llama "Le prompt entre guillemets"
 ```
 python3 -m toolkit.main diffusion "Le prompt entre guillemets"
 ```
+
+### Lancer un prompt musicgen
+```
+python3 -m toolkit.main musicgen "Le prompt entre guillemets"
+```
