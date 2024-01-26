@@ -119,7 +119,9 @@ python3 -m toolkit.main diffusion "Le prompt entre guillemets"
 ```
 python3 -m toolkit.main musicgen "Le prompt entre guillemets"
 ```
+## Portabilités
 
+Le projet a été conçu pour être accessible sur Windows et Linux. Le projet n'a pas été étudié pour être compatible avec Mac.
 
 ## Limitations
 

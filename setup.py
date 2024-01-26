@@ -33,7 +33,7 @@ def install_dependencies(displayLog):
     dependencies = [
         'transformers==4.37.1',
         'diffusers==0.25.0',
-        'torch==1.10.0',
+        'torch==2.1.2',
         'ctransformers==0.2.27',
         'accelerate==0.25.0',
         'scipy==1.12.0',
@@ -136,7 +136,7 @@ def main():
         install_requires=[
             'transformers==4.37.1',
             'diffusers==0.25.0',
-            'torch==1.10.0',
+            'torch==2.1.2',
             'ctransformers==0.2.27',
             'accelerate==0.25.0',
             'scipy==1.12.0',

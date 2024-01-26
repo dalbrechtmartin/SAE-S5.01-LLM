@@ -22,7 +22,7 @@ class DiffusionWrapper(GenericModelWrapper):
         """
         super().__init__(model_config)
         # Additional diffusion-specific initialization if needed
-        device = torch.device("cpu")
+        device = torch.device("cpu") if model_config["diffusion_use_cpu"] else torch.device("cuda")
         
         # @code
         # Create a StableDiffusionPipeline instance from the pretrained model specified in the configuration.
@@ -47,6 +47,6 @@ class DiffusionWrapper(GenericModelWrapper):
         # Optionally, you can uncomment the line below to save the image with a filename based on the prompt.
         # @endcode
         image = self.pipe(prompt).images[0]
-        image.save("test.png")
-        # image.save(prompt.lower().replace(" ", "_") + ".png")
+        image.save("generatedImage.png")
+        #image.save(prompt.lower().replace(" ", "_") + ".png")
         return image
