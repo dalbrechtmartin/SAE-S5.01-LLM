@@ -46,3 +46,5 @@ class MusicgenWrapper(GenericModelWrapper):
 
         # Write the generated audio to a WAV file
         scipy.io.wavfile.write("musicgen_out.wav", rate=sampling_rate, data=audio_values[0, 0].numpy())
+
+        return "musicgen_out.wav generated!"
