@@ -28,7 +28,7 @@ Ce projet a été réalisé dans le cadre de la SAE S5.01 du BUT Informatique à
   ``` 
   Sur Windows : vous devez déjà avoir installé python 3.9 et avoir configuré ce-dernier
 
-### Pour installer le toolkit, exécutez les commandes suivantes 
+### Pour installer le toolkit, exécutez les commandes suivantes 
 > [!WARNING]
 > A ne pas faire si l'étape d'installation au-dessus a été réalisé !
 
