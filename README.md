@@ -19,15 +19,27 @@ Ce projet a été réalisé dans le cadre de la SAE S5.01 du BUT Informatique à
 </details>
 
 ## Installation
+> [!NOTE]
+> Si vous ne disposez pas de python 3.9, vous pouvez réaliser les commandes suivantes qui vont installés python et le toolkit :
 
-Pour installer le toolkit, exécutez les commandes suivantes :
+  Sur Linux : 
+  ```
+  ./global_install_lin.sh
+  ```
+
+  Sur Windows : 
+  ```
+  A venir
+  ```
+
+Pour installer le toolkit, exécutez les commandes suivantes (A ne pas faire si l'étape au-dessus a été réalisé) :
 
 ### Créer le toolkit (+ installation des dépendances)
 ```
 python3 setup.py install --user
 ```
 
-### Installer toutes les dépendances (vérification que rien n'a été oublié)
+### Installer toutes les dépendances (vérification que rien n'a été oublié) (OPTIONNEL)
 ```
 pip install -r requirements.txt
 ```

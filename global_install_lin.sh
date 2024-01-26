@@ -18,7 +18,10 @@ echo "Installation de Python 3.9.2..."
 # Installation de Python 3.9.2
 sudo apt install -y python3.9
 
-echo "Installation des dépendances avec pip..."
+echo "Installation du toolkit..."
+python3 setup.py install --user
+
+echo "Vérification des dépendances avec pip..."
 # Installation des dépendances avec pip
 pip install -r requirements.txt
 

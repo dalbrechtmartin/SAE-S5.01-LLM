@@ -6,8 +6,12 @@ echo Installing Chocolatey...
 echo Chocolatey installation complete.
 
 echo Installing Python 3...
-choco install python --version=3.9.2 -y
+choco install python --version=3.9 -y
 echo Python 3 installation complete.
+
+echo Installing Toolkit...
+python3 setup.py install --user
+echo Toolkit installation complete.
 
 echo Installing Python dependencies...
 pip install -r requirements.txt
