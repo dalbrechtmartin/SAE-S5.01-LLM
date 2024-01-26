@@ -32,6 +32,7 @@ Ce projet a été réalisé dans le cadre de la SAE S5.01 du BUT Informatique à
   A venir
   ```
 
+[!Warning]
 Pour installer le toolkit, exécutez les commandes suivantes (A ne pas faire si l'étape au-dessus a été réalisé) :
 
 ### Créer le toolkit (+ installation des dépendances)
