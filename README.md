@@ -20,20 +20,17 @@ Ce projet a été réalisé dans le cadre de la SAE S5.01 du BUT Informatique à
 
 ## Installation
 > [!NOTE]
-> Si vous ne disposez pas de python 3.9, vous pouvez réaliser les commandes suivantes qui vont installés python et le toolkit :
+> Si vous ne disposez pas de python 3.9, vous pouvez réaliser les commandes suivantes qui vont installer python 3.9 et le toolkit :
 
   Sur Linux : 
   ```
   ./global_install_lin.sh
-  ```
+  ``` 
+  Sur Windows : vous devez déjà avoir installé python 3.9 et avoir configuré ce-dernier
 
-  Sur Windows : 
-  ```
-  A venir
-  ```
-
+### Pour installer le toolkit, exécutez les commandes suivantes 
 > [!WARNING]
-> Pour installer le toolkit, exécutez les commandes suivantes (A ne pas faire si l'étape au-dessus a été réalisé) :
+> A ne pas faire si l'étape d'installation au-dessus a été réalisé !
 
 ### Créer le toolkit (+ installation des dépendances)
 ```
@@ -119,6 +116,13 @@ python3 -m toolkit.main diffusion "Le prompt entre guillemets"
 ```
 python3 -m toolkit.main musicgen "Le prompt entre guillemets"
 ```
+
+
+### Lancer un prompt sur tous les modèles
+```
+python3 -m toolkit.main all "Le prompt entre guillemets"
+```
+
 ## Portabilités
 
 Le projet a été conçu pour être accessible sur Windows et Linux. Le projet n'a pas été étudié pour être compatible avec Mac.
