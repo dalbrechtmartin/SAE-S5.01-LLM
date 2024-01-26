@@ -120,7 +120,8 @@ Le projet SAE - S5.01 - LLM présente les limitations suivantes :
 #### Languages
 
 * ![Python]
-* Bash/Shell
+* Batch
+* Shell
 
 #### Références
 
