@@ -8,8 +8,8 @@ class LlamaWrapper(GenericModelWrapper):
         self.llm = AutoModelForCausalLM.from_pretrained(
             model_config["llama_model"],
             model_file=model_config["llama_model_file"],
-            model_type="llama",
-            gpu_layers=0,
+            model_type=model_config["llama_model_type"],
+            gpu_layers=model_config["llama_gpu_layers"],
         )
 
     def generate(self, prompt):
