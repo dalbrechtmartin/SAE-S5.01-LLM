@@ -1,4 +1,10 @@
+# @brief Configuration settings for various models.
+#
+# This YAML file defines configuration settings for different models used in the application.
+# Each model is associated with a specific key and value pair.
+
 llama_model: "TheBloke/Llama-2-13B-Ensemble-v5-GGUF"
+
 llama_model_file: "llama-2-13b-ensemble-v5.Q5_K_M.gguf"
 llama_model_type: "llama"
 llama_gpu_layers: 0 #Mettre à 0 si vous n'avez pas de GPU, sinon plus vous mettez un chiffre elevé plus le GPU sera utilisé
@@ -6,7 +12,7 @@ llama_gpu_layers: 0 #Mettre à 0 si vous n'avez pas de GPU, sinon plus vous mett
 diffusion_model: "runwayml/stable-diffusion-v1-5"
 diffusion_use_cpu: True
 
-musicgen_model: "facebook/musicgen-small"
+musicgen_model: "facebook/musicgen-large"
 musicgen_padding: True
 musicgen_return_tensors: "pt"
 musicgen_max_new_tokens: 256
