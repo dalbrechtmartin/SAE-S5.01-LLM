@@ -19,15 +19,28 @@ Ce projet a été réalisé dans le cadre de la SAE S5.01 du BUT Informatique à
 </details>
 
 ## Installation
+> [!NOTE]
+> Si vous ne disposez pas de python 3.9, vous pouvez réaliser les commandes suivantes qui vont installés python et le toolkit :
 
-Pour installer le toolkit, exécutez les commandes suivantes :
+  Sur Linux : 
+  ```
+  ./global_install_lin.sh
+  ```
+
+  Sur Windows : 
+  ```
+  A venir
+  ```
+
+> [!WARNING]
+> Pour installer le toolkit, exécutez les commandes suivantes (A ne pas faire si l'étape au-dessus a été réalisé) :
 
 ### Créer le toolkit (+ installation des dépendances)
 ```
 python3 setup.py install --user
 ```
 
-### Installer toutes les dépendances (vérification que rien n'a été oublié)
+### Installer toutes les dépendances (vérification que rien n'a été oublié) (OPTIONNEL)
 ```
 pip install -r requirements.txt
 ```
@@ -106,7 +119,9 @@ python3 -m toolkit.main diffusion "Le prompt entre guillemets"
 ```
 python3 -m toolkit.main musicgen "Le prompt entre guillemets"
 ```
+## Portabilités
 
+Le projet a été conçu pour être accessible sur Windows et Linux. Le projet n'a pas été étudié pour être compatible avec Mac.
 
 ## Limitations
 
@@ -120,7 +135,8 @@ Le projet SAE - S5.01 - LLM présente les limitations suivantes :
 #### Languages
 
 * ![Python]
-* Bash/Shell
+* Batch
+* Shell
 
 #### Références
 

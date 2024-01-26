@@ -6,7 +6,13 @@
 llama_model: "TheBloke/Llama-2-13B-Ensemble-v5-GGUF"
 
 llama_model_file: "llama-2-13b-ensemble-v5.Q5_K_M.gguf"
+llama_model_type: "llama"
+llama_gpu_layers: 0 #Mettre à 0 si vous n'avez pas de GPU, sinon plus vous mettez un chiffre elevé plus le GPU sera utilisé
 
 diffusion_model: "runwayml/stable-diffusion-v1-5"
+diffusion_use_cpu: True
 
 musicgen_model: "facebook/musicgen-large"
+musicgen_padding: True
+musicgen_return_tensors: "pt"
+musicgen_max_new_tokens: 256
